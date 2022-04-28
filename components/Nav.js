@@ -45,7 +45,7 @@ export function Nav(){
   useEffect(() => {
     const loginUser = localStorage.getItem("loginUser")
     if (loginUser === null) {
-      setUserUrls({subTitles: ['회원가입', '로그인'], urls: ["/user/join","/user/login"]})
+      setUserUrls({subTitles: ['회원가입', '로그인'], urls: ["/auth/register","/auth/login"]})
       setImageInfos({imageUrl: 'https://as2.ftcdn.net/v2/jpg/01/85/61/65/1000_F_185616556_uCc1J5d5GNfRH6ErgP1G8x8ORLeG25en.jpg', imageTitle: 'sign'})
     } else {
       setUserUrls({subTitles: ["프로필", "정보수정", "로그아웃" , "회원탈퇴"], urls: ["/user/profile", "/user/modifyUser", "/user/logout", "/user/delUser"]})
@@ -65,7 +65,7 @@ export function Nav(){
   const boardSubTitle = ["글등록","글목록","글수정","글삭제"]
   
   return (
-    <AppBar position="static" style={{marginBottom:"70px"}}>
+    <AppBar position="static" style={{marginBottom:"-30px"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography variant="h6" noWrap component="div" sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
